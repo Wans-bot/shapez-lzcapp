@@ -11,8 +11,8 @@ update:
   strategy: publish
   allow_downgrade: false
   version_source:
-    version_type: image
-    version_image: web
+    type: image
+    image: web
 
 build:
   run_buildscript: false
@@ -22,7 +22,7 @@ images:
     target: service
     service: shapez
     source: registry.lazycat.cloud/wans/wans/shapez-web
-    channel: stable
+    channel: custom
     tag_regex: '^[0-9a-f]{16}$'
     sort: created
     delivery:
