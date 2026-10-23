@@ -21,9 +21,6 @@ images:
     target: service
     service: shapez
     source: registry.lazycat.cloud/wans/wans/shapez-web
-    channel: custom
-    tag_regex: '^[0-9a-f]{16}$'
-    sort: created
     delivery:
       mode: lazycat
 
