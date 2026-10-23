@@ -1,0 +1,16 @@
+application:
+  subdomain: shapez
+  background_task: false
+  routes:
+    - /=http://shapez.cloud.lazycat.app.shapez.lzcapp:80
+services:
+  shapez:
+    # upstream: shapez-web
+    image: registry.lazycat.cloud/wans/wans/shapez-web:38cb5e06df1b16e7
+    environment:
+      - TZ=Asia/Shanghai
+    healthcheck:
+      test_url: http://127.0.0.1:80/
+      interval: 30s
+      timeout: 5s
+      retries: 3

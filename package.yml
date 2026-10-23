@@ -1,0 +1,35 @@
+name: cloud.lazycat.app.shapez
+package: cloud.lazycat.app.shapez
+description: shapez 工厂自动化游戏 Web 版
+version: 1.5.7
+author: tobspr Games
+source: https://github.com/tobspr-games/shapez.io
+license: GPL-3.0
+keywords:
+  - shapez
+  - game
+  - factory
+  - 游戏
+  - 工厂
+  - 自动化
+categories:
+  - Game
+locales:
+  zh-CN:
+    name: shapez 工厂自动化
+    description: shapez 是一款灵感来自 Factorio 的工厂自动化建造游戏。通过切割、旋转、合并和染色形状，构建并优化你的工厂，最终实现全自动化！
+    usage: |
+      安装后从懒猫应用中心打开 shapez，即可直接在浏览器中游玩。
+      游戏存档保存在浏览器本地，卸载应用前请注意导出存档。
+  en-US:
+    name: shapez
+    description: >-
+      shapez is an open source base building game inspired by Factorio. Build,
+      optimize and grow your factory by cutting, rotating, merging and painting
+      shapes.
+    usage: >
+      Open shapez from the LazyCat app center after installation and play
+      directly in your browser.
+
+      Savegames are stored in the browser's localStorage, please export before
+      uninstalling.

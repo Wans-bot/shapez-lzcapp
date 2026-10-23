@@ -1,0 +1,35 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/shapez.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: web
+
+build:
+  run_buildscript: false
+
+images:
+  - id: web
+    target: service
+    service: web
+    source: registry.lazycat.cloud/wans/wans/shapez-web
+    channel: stable
+    tag_regex: '^[0-9a-f]{{16}}$'
+    sort: created
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: false    # 版本号无法从 digest 型 tag 推导，暂不自动提审
+  private:
+    enabled: false
