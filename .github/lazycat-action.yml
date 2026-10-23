@@ -11,8 +11,7 @@ update:
   strategy: publish
   allow_downgrade: false
   version_source:
-    type: image
-    image: web
+    type: git
 
 build:
   run_buildscript: false
